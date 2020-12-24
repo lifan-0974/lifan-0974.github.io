@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="http://example.com/2020/12/23/SpringBoot/">
+<link rel="canonical" href="http://example.com/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
 
 
 
   <title>
-Spring Boot |
+解决Spring Boot前后端分离跨域问题 |
 阿帆的博客 = 阿帆的博客</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,16 +58,16 @@ Spring Boot |
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Spring Boot
+  <h1 itemprop="name headline">解决Spring Boot前后端分离跨域问题
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2020-12-23 22:14:53">
+  <span class="item" title="Created: 2020-12-24 13:47:01">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2020-12-23T22:14:53+08:00">2020-12-23</time>
+    <time itemprop="dateCreated datePublished" datetime="2020-12-24T13:47:01+08:00">2020-12-24</time>
   </span>
 </div>
 
@@ -100,12 +100,12 @@ Spring Boot |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -134,7 +134,7 @@ Spring Boot |
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/23/SpringBoot/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -149,15 +149,26 @@ Spring Boot |
   <div class="body md" itemprop="articleBody">
     
 
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <p>@[TOC](解决Spring Boot前后端分离跨域问题)</p>
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+
+<h1 id="一、在IDEA中添加配置文件"><a href="#一、在IDEA中添加配置文件" class="headerlink" title="一、在IDEA中添加配置文件"></a>一、在IDEA中添加配置文件</h1><font color=#999AAA >
+package com.lf.config;
+
+<p>import org.springframework.context.annotation.Configuration;<br>import org.springframework.web.servlet.config.annotation.CorsRegistry;<br>import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</p>
+<p>@Configuration<br>public class Config implements WebMvcConfigurer {</p>
+<pre><code>@Override
+public void addCorsMappings(CorsRegistry registry) &#123;
+    registry.addMapping(&quot;/**&quot;)
+            .allowedOrigins(&quot;*&quot;)
+            .allowedMethods(&quot;GET&quot;,&quot;HEAD&quot;,&quot;POST&quot;,&quot;PUT&quot;,&quot;DELETE&quot;,&quot;OPTIONS&quot;)
+            .allowCredentials(true)
+            .maxAge(3600)
+            .allowedHeaders(&quot;*&quot;);
+&#125;</code></pre>
+<p>}</p>
 
   </div>
 
@@ -169,7 +180,7 @@ Spring Boot |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2020-12-23 22:18:35" itemprop="dateModified" datetime="2020-12-23T22:18:35+08:00">2020-12-23</time>
+    <time title="Modified: 2020-12-24 13:49:42" itemprop="dateModified" datetime="2020-12-24T13:49:42+08:00">2020-12-24</time>
   </span>
 </div>
 
@@ -205,7 +216,7 @@ Spring Boot |
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://example.com/2020/12/23/SpringBoot/" title="Spring Boot">http://example.com/2020/12/23/SpringBoot/</a>
+    <a href="http://example.com/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">http://example.com/2020/12/24/解决Spring Boot前后端分离跨域问题/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -224,7 +235,7 @@ Spring Boot |
     <div class="item left">
       
 
-  <a href="/2020/12/23/Redis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeuibk9fj20zk0m8ay2.jpg" title="Redis">
+  <a href="/2020/12/23/Redis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevarprfj20zk0m8npd.jpg" title="Redis">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Redis</h3>
@@ -232,6 +243,14 @@ Spring Boot |
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="Vue基础">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue基础</h3>
+  </a>
+
     </div>
 </div>
 
@@ -248,7 +267,7 @@ Spring Boot |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9C%A8IDEA%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">一、在IDEA中添加配置文件</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -263,7 +282,7 @@ Spring Boot |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -294,10 +313,12 @@ Spring Boot |
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2020/12/23/Redis/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -321,25 +342,34 @@ Spring Boot |
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2020/12/24/springboot%E6%95%B4%E5%90%88redis/" title="vue">vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">解决Spring Boot前后端分离跨域问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2020/12/23/Redis/" title="Redis">Redis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/12/23/SpringBoot/" title="Spring Boot">Spring Boot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/12/23/vue/" title="vue">vue</a></span>
   </li>
 
   </ul>
@@ -370,7 +400,7 @@ Spring Boot |
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2020/12/23/SpringBoot/',
+    path: '2020/12/24/解决Spring Boot前后端分离跨域问题/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
