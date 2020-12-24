@@ -100,12 +100,12 @@ Spring Boot整合Redis |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
         </ul>
       </div>
     </header>
@@ -150,22 +150,7 @@ Spring Boot整合Redis |
     
 
     <h1 id="Spring-Boot整合Redis："><a href="#Spring-Boot整合Redis：" class="headerlink" title="Spring Boot整合Redis："></a>Spring Boot整合Redis：</h1><p>基于内存进行存储，支持key-value的存储形式，底层是用C语言编写的<br>基于key-value形式的数据字典，结构非常简单，没有数据表的概念，直接用键值对的形式完成对数据的管理，Redis支持五种数据类型<br>1.字符串<br>2.列表<br>3.集合<br>4.有序集合<br>5.哈希</p>
-<h1 id="创建maven工程："><a href="#创建maven工程：" class="headerlink" title="创建maven工程："></a>创建maven工程：</h1><?xml version="1.0" encoding="UTF-8"?>
-<p><project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"><br>    <modelVersion>4.0.0</modelVersion></p>
-<pre><code>&lt;groupId&gt;com.hhzhu&lt;/groupId&gt;
-&lt;artifactId&gt;redis_practice&lt;/artifactId&gt;
-&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-
-&lt;parent&gt;
-    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-    &lt;version&gt;2.1.5.RELEASE&lt;/version&gt;
-
-&lt;/parent&gt;
-
-&lt;dependencies&gt;
+<h1 id="创建maven工程："><a href="#创建maven工程：" class="headerlink" title="创建maven工程："></a>创建maven工程：</h1><pre><code>&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
@@ -174,9 +159,9 @@ Spring Boot整合Redis |
     &lt;dependency&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
-    &lt;/dependency&gt;</code></pre>
-<!--连接池-->
-<pre><code>    &lt;dependency&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
         &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
         &lt;artifactId&gt;commons-pool2&lt;/artifactId&gt;
     &lt;/dependency&gt;
@@ -186,76 +171,42 @@ Spring Boot整合Redis |
         &lt;artifactId&gt;lombok&lt;/artifactId&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
-</project>
+<h1 id="创建实体类，实现序列化接口："><a href="#创建实体类，实现序列化接口：" class="headerlink" title="创建实体类，实现序列化接口："></a>创建实体类，实现序列化接口：</h1><p>@Data<br>//实现序列化接口，否则无法存入redis<br>public class Student implements Serializable {<br>    private Integer id;<br>    private String name;<br>    private Double score;<br>    private Date birthday;<br>}</p>
+<h1 id="创建控制器学习产出："><a href="#创建控制器学习产出：" class="headerlink" title="创建控制器学习产出："></a>创建控制器学习产出：</h1><p>@RestController<br>public class StudentHandler {</p>
+<pre><code>@Autowired
+private RedisTemplate redisTemplate;
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+@PostMapping(&quot;/set&quot;)
+//Request将json数据转换成java对象
+public void set(@RequestBody Student student)&#123;
+    redisTemplate.opsForValue().set(&quot;student&quot;,student);
 
-<h1 id="创建实体类，实现序列化接口："><a href="#创建实体类，实现序列化接口：" class="headerlink" title="创建实体类，实现序列化接口："></a>创建实体类，实现序列化接口：</h1><p>package com.hhzhu.pojo;</p>
-<p>import lombok.Data;</p>
-<p>import java.io.Serializable;<br>import java.util.Date;</p>
-<p>/**</p>
-<ul>
-<li>Description:</li>
-<li></li>
-<li>@author ZhuHh</li>
-<li>@data Create on 2020/3/15</li>
-<li>/<br>@Data<br>//实现序列化接口，否则无法存入redis<br>public class Student implements Serializable {<br>  private Integer id;<br>  private String name;<br>  private Double score;<br>  private Date birthday;<br>}</li>
-</ul>
-<h1 id="创建控制器学习产出："><a href="#创建控制器学习产出：" class="headerlink" title="创建控制器学习产出："></a>创建控制器学习产出：</h1><p>package com.hhzhu.controller;</p>
-<p>import com.hhzhu.pojo.Student;<br>import org.springframework.beans.factory.annotation.Autowired;<br>import org.springframework.data.redis.core.RedisTemplate;<br>import org.springframework.web.bind.annotation.PostMapping;<br>import org.springframework.web.bind.annotation.RequestBody;<br>import org.springframework.web.bind.annotation.RestController;</p>
-<p>/**</p>
-<ul>
-<li><p>Description:</p>
-</li>
-<li></li>
-<li><p>@author ZhuHh</p>
-</li>
-<li><p>@data Create on 2020/3/15</p>
-</li>
-<li><p>/<br>@RestController<br>public class StudentHandler {</p>
-<p>  @Autowired<br>  private RedisTemplate redisTemplate;</p>
-<p>  @PostMapping(“/set”)<br>  //Request将json数据转换成java对象<br>  public void set(@RequestBody Student student){</p>
-<pre><code>  redisTemplate.opsForValue().set(&quot;student&quot;,student);</code></pre>
-<p>  }<br>}</p>
-</li>
-</ul>
+&#125;</code></pre>
+<p>}</p>
 <h1 id="创建配置文件appliacation-yml"><a href="#创建配置文件appliacation-yml" class="headerlink" title="创建配置文件appliacation.yml"></a>创建配置文件appliacation.yml</h1><p>spring:<br>  redis:<br>    database: 0<br>    host: localhost<br>    port: 6379# 创建配置文件appliacation.yml</p>
-<h1 id="创建启动类"><a href="#创建启动类" class="headerlink" title="创建启动类"></a>创建启动类</h1><p>package com.hhzhu;</p>
-<p>import org.springframework.boot.SpringApplication;<br>import org.springframework.boot.autoconfigure.SpringBootApplication;</p>
-<p>/**</p>
-<ul>
-<li>Description:</li>
-<li></li>
-<li>@author ZhuHh</li>
-<li>@data Create on 2020/3/15</li>
-<li>/<br>@SpringBootApplication<br>public class Application {<br>  public static void main(String[] args) {<pre><code>  SpringApplication.run(Application.class,args);</code></pre>
-  }<br>}</li>
-</ul>
-<h1 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h1><p>package com.hhzhu.controller;</p>
-<p>import com.hhzhu.pojo.Student;<br>import org.springframework.beans.factory.annotation.Autowired;<br>import org.springframework.data.redis.core.RedisTemplate;<br>import org.springframework.web.bind.annotation.*;</p>
-<p>/**</p>
-<ul>
-<li><p>Description:</p>
-</li>
-<li></li>
-<li><p>@author ZhuHh</p>
-</li>
-<li><p>@data Create on 2020/3/15</p>
-</li>
-<li><p>/<br>@RestController<br>public class StudentHandler {</p>
-<p>  @Autowired<br>  private RedisTemplate redisTemplate;</p>
-<p>  @PostMapping(“/set”)<br>  //Request将json数据转换成java对象<br>  public void set(@RequestBody Student student){</p>
-<pre><code>  redisTemplate.opsForValue().set(&quot;student&quot;,student);</code></pre>
-<p>  }</p>
-<p>  @GetMapping(“/get/{key}”)<br>  public Student get(@PathVariable(“key”) String key){</p>
-<pre><code>  return (Student) redisTemplate.opsForValue().get(key);</code></pre>
-<p>  }</p>
-<p>  @DeleteMapping(“/delete/{key}”)<br>  public boolean delete(@PathVariable(“key”) String key){</p>
-<pre><code>  redisTemplate.delete(key);
-  return redisTemplate.hasKey(key);</code></pre>
-<p>  }<br>}</p>
-</li>
-</ul>
+<h1 id="创建启动类"><a href="#创建启动类" class="headerlink" title="创建启动类"></a>创建启动类</h1><p>@SpringBootApplication<br>public class Application {<br>    public static void main(String[] args) {<br>        SpringApplication.run(Application.class,args);<br>    }<br>}</p>
+<h1 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h1><p>@RestController<br>public class StudentHandler {</p>
+<pre><code>@Autowired
+private RedisTemplate redisTemplate;
+
+@PostMapping(&quot;/set&quot;)
+//Request将json数据转换成java对象
+public void set(@RequestBody Student student)&#123;
+    redisTemplate.opsForValue().set(&quot;student&quot;,student);
+
+&#125;
+
+@GetMapping(&quot;/get/&#123;key&#125;&quot;)
+public Student get(@PathVariable(&quot;key&quot;) String key)&#123;
+    return (Student) redisTemplate.opsForValue().get(key);
+&#125;
+
+@DeleteMapping(&quot;/delete/&#123;key&#125;&quot;)
+public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
+    redisTemplate.delete(key);
+    return redisTemplate.hasKey(key);
+&#125;</code></pre>
+<p>}</p>
 
   </div>
 
@@ -267,7 +218,7 @@ Spring Boot整合Redis |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2020-12-24 17:22:10" itemprop="dateModified" datetime="2020-12-24T17:22:10+08:00">2020-12-24</time>
+    <time title="Modified: 2020-12-24 21:24:18" itemprop="dateModified" datetime="2020-12-24T21:24:18+08:00">2020-12-24</time>
   </span>
 </div>
 
@@ -322,7 +273,7 @@ Spring Boot整合Redis |
     <div class="item left">
       
 
-  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm07ih54j20zk0m84qp.jpg" title="Vue基础">
+  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclga70tsj20zk0m84mr.jpg" title="Vue基础">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Vue基础</h3>
@@ -332,7 +283,7 @@ Spring Boot整合Redis |
     <div class="item right">
       
 
-  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="关于ssm使用pagehelper失效问题">
+  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewkhf1zj20zk0m81kx.jpg" title="关于ssm使用pagehelper失效问题">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>关于ssm使用pagehelper失效问题</h3>
@@ -429,16 +380,7 @@ Spring Boot整合Redis |
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" title="关于ssm使用pagehelper失效问题">关于ssm使用pagehelper失效问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">解决Spring Boot前后端分离跨域问题</a></span>
+    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
   </li>
 
       
@@ -456,7 +398,16 @@ Spring Boot整合Redis |
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
+    <span><a href="/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">解决Spring Boot前后端分离跨域问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" title="关于ssm使用pagehelper失效问题">关于ssm使用pagehelper失效问题</a></span>
   </li>
 
   </ul>
