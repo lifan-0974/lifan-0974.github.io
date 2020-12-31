@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="要跨年了哟^_^" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="要跨年了哟^_^" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="要跨年了哟^_^" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="新年快乐鸭*^_^*" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="新年快乐鸭*^_^*" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="新年快乐鸭*^_^*" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
@@ -31,7 +31,7 @@
 
   <title>
 Spring Boot整合Redis |
-阿帆的博客 = 要跨年了哟^_^</title>
+阿帆的博客 = 新年快乐鸭*^_^*</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -74,7 +74,7 @@ Spring Boot整合Redis |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span></span>
+    <span>2k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ Spring Boot整合Redis |
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>NaN:aN</span>
+    <span>2 mins.</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ Spring Boot整合Redis |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
         </ul>
       </div>
     </header>
@@ -158,14 +158,22 @@ Spring Boot整合Redis |
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="要跨年了哟^_^">
+    <meta itemprop="name" content="新年快乐鸭*^_^*">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="Spring-Boot整合Redis："><a href="#Spring-Boot整合Redis：" class="headerlink" title="Spring Boot整合Redis："></a>Spring Boot整合Redis：</h1><p>基于内存进行存储，支持key-value的存储形式，底层是用C语言编写的<br>基于key-value形式的数据字典，结构非常简单，没有数据表的概念，直接用键值对的形式完成对数据的管理，Redis支持五种数据类型<br>1.字符串<br>2.列表<br>3.集合<br>4.有序集合<br>5.哈希</p>
-<h1 id="创建maven工程："><a href="#创建maven工程：" class="headerlink" title="创建maven工程："></a>创建maven工程：</h1><pre><code>&lt;dependencies&gt;
+    <h1 id="spring-boot整合redis"><a class="markdownIt-Anchor" href="#spring-boot整合redis">#</a> Spring Boot 整合 Redis：</h1>
+<p>基于内存进行存储，支持 key-value 的存储形式，底层是用 C 语言编写的<br>
+基于 key-value 形式的数据字典，结构非常简单，没有数据表的概念，直接用键值对的形式完成对数据的管理，Redis 支持五种数据类型<br>
+ 1. 字符串<br>
+ 2. 列表<br>
+ 3. 集合<br>
+ 4. 有序集合<br>
+ 5. 哈希</p>
+<h1 id="创建maven工程"><a class="markdownIt-Anchor" href="#创建maven工程">#</a> 创建 maven 工程：</h1>
+<pre><code>&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
@@ -185,9 +193,20 @@ Spring Boot整合Redis |
         &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
         &lt;artifactId&gt;lombok&lt;/artifactId&gt;
     &lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre>
-<h1 id="创建实体类，实现序列化接口："><a href="#创建实体类，实现序列化接口：" class="headerlink" title="创建实体类，实现序列化接口："></a>创建实体类，实现序列化接口：</h1><p>@Data<br>//实现序列化接口，否则无法存入redis<br>public class Student implements Serializable {<br>    private Integer id;<br>    private String name;<br>    private Double score;<br>    private Date birthday;<br>}</p>
-<h1 id="创建控制器学习产出："><a href="#创建控制器学习产出：" class="headerlink" title="创建控制器学习产出："></a>创建控制器学习产出：</h1><p>@RestController<br>public class StudentHandler {</p>
+&lt;/dependencies&gt;
+</code></pre>
+<h1 id="创建实体类实现序列化接口"><a class="markdownIt-Anchor" href="#创建实体类实现序列化接口">#</a> 创建实体类，实现序列化接口：</h1>
+<p>@Data<br>
+// 实现序列化接口，否则无法存入 redis<br>
+public class Student implements Serializable {<br>
+private Integer id;<br>
+private String name;<br>
+private Double score;<br>
+private Date birthday;<br>
+}</p>
+<h1 id="创建控制器学习产出"><a class="markdownIt-Anchor" href="#创建控制器学习产出">#</a> 创建控制器学习产出：</h1>
+<p>@RestController<br>
+public class StudentHandler {</p>
 <pre><code>@Autowired
 private RedisTemplate redisTemplate;
 
@@ -196,11 +215,25 @@ private RedisTemplate redisTemplate;
 public void set(@RequestBody Student student)&#123;
     redisTemplate.opsForValue().set(&quot;student&quot;,student);
 
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>}</p>
-<h1 id="创建配置文件appliacation-yml"><a href="#创建配置文件appliacation-yml" class="headerlink" title="创建配置文件appliacation.yml"></a>创建配置文件appliacation.yml</h1><p>spring:<br>  redis:<br>    database: 0<br>    host: localhost<br>    port: 6379# 创建配置文件appliacation.yml</p>
-<h1 id="创建启动类"><a href="#创建启动类" class="headerlink" title="创建启动类"></a>创建启动类</h1><p>@SpringBootApplication<br>public class Application {<br>    public static void main(String[] args) {<br>        SpringApplication.run(Application.class,args);<br>    }<br>}</p>
-<h1 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h1><p>@RestController<br>public class StudentHandler {</p>
+<h1 id="创建配置文件appliacationyml"><a class="markdownIt-Anchor" href="#创建配置文件appliacationyml">#</a> 创建配置文件 appliacation.yml</h1>
+<p>spring:<br>
+redis:<br>
+database: 0<br>
+host: localhost<br>
+port: 6379# 创建配置文件 appliacation.yml</p>
+<h1 id="创建启动类"><a class="markdownIt-Anchor" href="#创建启动类">#</a> 创建启动类</h1>
+<p>@SpringBootApplication<br>
+public class Application {<br>
+public static void main(String[] args) {<br>
+SpringApplication.run(Application.class,args);<br>
+}<br>
+}</p>
+<h1 id="crud"><a class="markdownIt-Anchor" href="#crud">#</a> CRUD</h1>
+<p>@RestController<br>
+public class StudentHandler {</p>
 <pre><code>@Autowired
 private RedisTemplate redisTemplate;
 
@@ -220,7 +253,8 @@ public Student get(@PathVariable(&quot;key&quot;) String key)&#123;
 public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
     redisTemplate.delete(key);
     return redisTemplate.hasKey(key);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>}</p>
 
   </div>
@@ -265,7 +299,7 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>要跨年了哟^_^
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>新年快乐鸭*^_^*
   </li>
   <li class="link">
     <strong>Post link: </strong>
@@ -288,7 +322,7 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
     <div class="item left">
       
 
-  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeudstjqj20zk0m8k3r.jpg" title="Vue基础">
+  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljgocqbj20zk0m8e81.jpg" title="Vue基础">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Vue基础</h3>
@@ -298,7 +332,7 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
     <div class="item right">
       
 
-  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="关于ssm使用pagehelper失效问题">
+  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicm0fdw5cj20zk0m8hdt.jpg" title="关于ssm使用pagehelper失效问题">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>关于ssm使用pagehelper失效问题</h3>
@@ -320,7 +354,7 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-Boot%E6%95%B4%E5%90%88Redis%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">Spring Boot整合Redis：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAmaven%E5%B7%A5%E7%A8%8B%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">创建maven工程：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%BA%8F%E5%88%97%E5%8C%96%E6%8E%A5%E5%8F%A3%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">创建实体类，实现序列化接口：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BA%A7%E5%87%BA%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">创建控制器学习产出：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6appliacation-yml"><span class="toc-number">5.</span> <span class="toc-text">创建配置文件appliacation.yml</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E7%B1%BB"><span class="toc-number">6.</span> <span class="toc-text">创建启动类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CRUD"><span class="toc-number">7.</span> <span class="toc-text">CRUD</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-boot%E6%95%B4%E5%90%88redis"><span class="toc-number">1.</span> <span class="toc-text"> Spring Boot 整合 Redis：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAmaven%E5%B7%A5%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 创建 maven 工程：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB%E5%AE%9E%E7%8E%B0%E5%BA%8F%E5%88%97%E5%8C%96%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.</span> <span class="toc-text"> 创建实体类，实现序列化接口：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BA%A7%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text"> 创建控制器学习产出：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6appliacationyml"><span class="toc-number">5.</span> <span class="toc-text"> 创建配置文件 appliacation.yml</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%90%AF%E5%8A%A8%E7%B1%BB"><span class="toc-number">6.</span> <span class="toc-text"> 创建启动类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#crud"><span class="toc-number">7.</span> <span class="toc-text"> CRUD</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -390,15 +424,6 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/springboot%E6%95%B4%E5%90%88redis/" title="Spring Boot整合Redis">Spring Boot整合Redis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2020/12/30/Shiro/" title="Spring Boot整合Shiro">Spring Boot整合Shiro</a></span>
   </li>
 
@@ -408,7 +433,16 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
+    <span><a href="/2020/12/24/springboot%E6%95%B4%E5%90%88redis/" title="Spring Boot整合Redis">Spring Boot整合Redis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" title="关于ssm使用pagehelper失效问题">关于ssm使用pagehelper失效问题</a></span>
   </li>
 
       
@@ -426,7 +460,7 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" title="关于ssm使用pagehelper失效问题">关于ssm使用pagehelper失效问题</a></span>
+    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
   </li>
 
   </ul>
@@ -451,13 +485,13 @@ public boolean delete(@PathVariable(&quot;key&quot;) String key)&#123;
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">NaNm words</span>
+    <span title="Symbols count total">12k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">NaN:aN</span>
+    <span title="Reading time total">11 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

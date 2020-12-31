@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="要跨年了哟^_^" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="要跨年了哟^_^" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="要跨年了哟^_^" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="新年快乐鸭*^_^*" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="新年快乐鸭*^_^*" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="新年快乐鸭*^_^*" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
@@ -31,7 +31,7 @@
 
   <title>
 Spring Boot整合Shiro |
-阿帆的博客 = 要跨年了哟^_^</title>
+阿帆的博客 = 新年快乐鸭*^_^*</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -74,7 +74,7 @@ Spring Boot整合Shiro |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span></span>
+    <span>5.2k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ Spring Boot整合Shiro |
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>NaN:aN</span>
+    <span>5 mins.</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@ Spring Boot整合Shiro |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
         </ul>
       </div>
     </header>
@@ -158,17 +158,19 @@ Spring Boot整合Shiro |
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="要跨年了哟^_^">
+    <meta itemprop="name" content="新年快乐鸭*^_^*">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="Shiro"><a href="#Shiro" class="headerlink" title="Shiro"></a>Shiro</h1><p>什么是 Shiro</p>
+    <h1 id="shiro"><a class="markdownIt-Anchor" href="#shiro">#</a> Shiro</h1>
+<p>什么是 Shiro</p>
 <p>官网：<span class="exturl" data-url="aHR0cDovL3NoaXJvLmFwYWNoZS5vcmcv">http://shiro.apache.org/</span></p>
 <p>是一款主流的 Java 安全框架，不依赖任何容器，可以运行在 Java SE 和 Java EE 项目中，它的主要作用是对访问系统的用户进行身份认证、授权、会话管理、加密等操作。</p>
 <p>Shiro 就是用来解决安全管理的系统化框架。</p>
-<h1 id="Shiro-核心组件"><a href="#Shiro-核心组件" class="headerlink" title="Shiro 核心组件"></a>Shiro 核心组件</h1><p>用户、角色、权限</p>
+<h1 id="shiro-核心组件"><a class="markdownIt-Anchor" href="#shiro-核心组件">#</a> Shiro 核心组件</h1>
+<p>用户、角色、权限</p>
 <p>会给角色赋予权限，给用户赋予角色</p>
 <p>1、UsernamePasswordToken，Shiro 用来封装用户登录信息，使用用户的登录信息来创建令牌 Token。</p>
 <p>2、SecurityManager，Shiro 的核心部分，负责安全认证和授权。</p>
@@ -179,8 +181,9 @@ Spring Boot整合Shiro |
 <p>7、DefaultWebSecurityManager，安全管理器，开发者自定义的 Realm 需要注入到 DefaultWebSecurityManager 进行管理才能生效。</p>
 <p>8、ShiroFilterFactoryBean，过滤器工厂，Shiro 的基本运行机制是开发者定制规则，Shiro 去执行，具体的执行操作就是由 ShiroFilterFactoryBean 创建的一个个 Filter 对象来完成。</p>
 <p>Shiro 的运行机制如下图所示。</p>
-<p><img data-src="C:\Users\ningn\AppData\Roaming\Typora\typora-user-images\image-20200604095125608.png" alt="image-20200604095125608"></p>
-<h1 id="Spring-Boot-整合-Shiro"><a href="#Spring-Boot-整合-Shiro" class="headerlink" title="Spring Boot 整合 Shiro"></a>Spring Boot 整合 Shiro</h1><p>1、创建 Spring Boot 应用，集成 Shiro 及相关组件，pom.xml</p>
+<p><img data-src="C:%5CUsers%5Cningn%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200604095125608.png" alt="image-20200604095125608"></p>
+<h1 id="spring-boot-整合-shiro"><a class="markdownIt-Anchor" href="#spring-boot-整合-shiro">#</a> Spring Boot 整合 Shiro</h1>
+<p>1、创建 Spring Boot 应用，集成 Shiro 及相关组件，pom.xml</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-thymeleaf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.1.tmp<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.vintage<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-vintage-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>2、自定义 Shiro 过滤器</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccoutRealm</span> <span class="keyword">extends</span> <span class="title">AuthorizingRealm</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> AccountService accountService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 授权</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> principalCollection</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> AuthorizationInfo <span class="title">doGetAuthorizationInfo</span><span class="params">(PrincipalCollection principalCollection)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 认证</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> authenticationToken</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> AuthenticationException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> AuthenticationInfo <span class="title">doGetAuthenticationInfo</span><span class="params">(AuthenticationToken authenticationToken)</span> <span class="keyword">throws</span> AuthenticationException </span>&#123;</span><br><span class="line">        UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;</span><br><span class="line">        Account account = accountService.findByUsername(token.getUsername());</span><br><span class="line">        <span class="keyword">if</span>(account != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> SimpleAuthenticationInfo(account,account.getPassword(),getName());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -258,7 +261,7 @@ Spring Boot整合Shiro |
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>要跨年了哟^_^
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>新年快乐鸭*^_^*
   </li>
   <li class="link">
     <strong>Post link: </strong>
@@ -281,7 +284,7 @@ Spring Boot整合Shiro |
     <div class="item left">
       
 
-  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuv0socj20zk0m8qes.jpg" title="关于ssm使用pagehelper失效问题">
+  <a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyvx1d4j20zk0m8hdt.jpg" title="关于ssm使用pagehelper失效问题">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>关于ssm使用pagehelper失效问题</h3>
@@ -305,7 +308,7 @@ Spring Boot整合Shiro |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Shiro"><span class="toc-number">1.</span> <span class="toc-text">Shiro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shiro-%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">Shiro 核心组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-Boot-%E6%95%B4%E5%90%88-Shiro"><span class="toc-number">3.</span> <span class="toc-text">Spring Boot 整合 Shiro</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shiro"><span class="toc-number">1.</span> <span class="toc-text"> Shiro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shiro-%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> Shiro 核心组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-boot-%E6%95%B4%E5%90%88-shiro"><span class="toc-number">3.</span> <span class="toc-text"> Spring Boot 整合 Shiro</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -373,6 +376,24 @@ Spring Boot整合Shiro |
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/12/30/Shiro/" title="Spring Boot整合Shiro">Spring Boot整合Shiro</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2020/12/24/springboot%E6%95%B4%E5%90%88redis/" title="Spring Boot整合Redis">Spring Boot整合Redis</a></span>
   </li>
 
@@ -392,24 +413,6 @@ Spring Boot整合Shiro |
 </div>
 
     <span><a href="/2020/12/24/%E5%85%B3%E4%BA%8ESsm%E4%BD%BF%E7%94%A8pagehelper%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" title="关于ssm使用pagehelper失效问题">关于ssm使用pagehelper失效问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/12/30/Shiro/" title="Spring Boot整合Shiro">Spring Boot整合Shiro</a></span>
   </li>
 
   </ul>
@@ -434,13 +437,13 @@ Spring Boot整合Shiro |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">NaNm words</span>
+    <span title="Symbols count total">12k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">NaN:aN</span>
+    <span title="Reading time total">11 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

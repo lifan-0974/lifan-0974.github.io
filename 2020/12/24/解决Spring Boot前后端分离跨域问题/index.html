@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="要跨年了哟^_^" href="http://example.com/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="要跨年了哟^_^" href="http://example.com/atom.xml" />
-<link rel="alternate" type="application/json" title="要跨年了哟^_^" href="http://example.com/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="新年快乐鸭*^_^*" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="新年快乐鸭*^_^*" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="新年快乐鸭*^_^*" href="http://example.com/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
@@ -31,7 +31,7 @@
 
   <title>
 解决Spring Boot前后端分离跨域问题 |
-阿帆的博客 = 要跨年了哟^_^</title>
+阿帆的博客 = 新年快乐鸭*^_^*</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -74,7 +74,7 @@
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span></span>
+    <span>640</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>NaN:aN</span>
+    <span>1 mins.</span>
   </span>
 </div>
 
@@ -115,12 +115,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
         </ul>
       </div>
     </header>
@@ -158,15 +158,20 @@
   </span>
 
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="要跨年了哟^_^">
+    <meta itemprop="name" content="新年快乐鸭*^_^*">
   </span>
 
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="解决Spring-Boot前后端分离跨域问题"><a href="#解决Spring-Boot前后端分离跨域问题" class="headerlink" title="解决Spring Boot前后端分离跨域问题"></a>解决Spring Boot前后端分离跨域问题</h1><h1 id="一、在IDEA中添加配置文件"><a href="#一、在IDEA中添加配置文件" class="headerlink" title="一、在IDEA中添加配置文件"></a>一、在IDEA中添加配置文件</h1><p>package com.lf.config;</p>
-<p>import org.springframework.context.annotation.Configuration;<br>import org.springframework.web.servlet.config.annotation.CorsRegistry;<br>import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</p>
-<p>@Configuration<br>public class Config implements WebMvcConfigurer {</p>
+    <h1 id="解决spring-boot前后端分离跨域问题"><a class="markdownIt-Anchor" href="#解决spring-boot前后端分离跨域问题">#</a> 解决 Spring Boot 前后端分离跨域问题</h1>
+<h1 id="一-在idea中添加配置文件"><a class="markdownIt-Anchor" href="#一-在idea中添加配置文件">#</a> 一、在 IDEA 中添加配置文件</h1>
+<p>package com.lf.config;</p>
+<p>import org.springframework.context.annotation.Configuration;<br>
+import org.springframework.web.servlet.config.annotation.CorsRegistry;<br>
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</p>
+<p>@Configuration<br>
+public class Config implements WebMvcConfigurer {</p>
 <pre><code>@Override
 public void addCorsMappings(CorsRegistry registry) &#123;
     registry.addMapping(&quot;/**&quot;)
@@ -175,7 +180,8 @@ public void addCorsMappings(CorsRegistry registry) &#123;
             .allowCredentials(true)
             .maxAge(3600)
             .allowedHeaders(&quot;*&quot;);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>}</p>
 
   </div>
@@ -220,7 +226,7 @@ public void addCorsMappings(CorsRegistry registry) &#123;
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>要跨年了哟^_^
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>新年快乐鸭*^_^*
   </li>
   <li class="link">
     <strong>Post link: </strong>
@@ -245,7 +251,7 @@ public void addCorsMappings(CorsRegistry registry) &#123;
     <div class="item right">
       
 
-  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="Vue基础">
+  <a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgi503lj20zk0m8hdt.jpg" title="Vue基础">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Vue基础</h3>
@@ -267,7 +273,7 @@ public void addCorsMappings(CorsRegistry registry) &#123;
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3Spring-Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">解决Spring Boot前后端分离跨域问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9C%A8IDEA%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">一、在IDEA中添加配置文件</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3spring-boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text"> 解决 Spring Boot 前后端分离跨域问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%9C%A8idea%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> 一、在 IDEA 中添加配置文件</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -335,7 +341,7 @@ public void addCorsMappings(CorsRegistry registry) &#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
+    <span><a href="/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">解决Spring Boot前后端分离跨域问题</a></span>
   </li>
 
       
@@ -362,7 +368,7 @@ public void addCorsMappings(CorsRegistry registry) &#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/12/24/%E8%A7%A3%E5%86%B3Spring%20Boot%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" title="解决Spring Boot前后端分离跨域问题">解决Spring Boot前后端分离跨域问题</a></span>
+    <span><a href="/2020/12/24/vue%E5%9F%BA%E7%A1%80/" title="Vue基础">Vue基础</a></span>
   </li>
 
       
@@ -396,13 +402,13 @@ public void addCorsMappings(CorsRegistry registry) &#123;
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">NaNm words</span>
+    <span title="Symbols count total">12k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">NaN:aN</span>
+    <span title="Reading time total">11 mins.</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
