@@ -3,7 +3,26 @@
     <id>http://example.com</id>
     <title>新年快乐鸭*^_^*</title>
     <link href="http://example.com" />
-    <updated>2021-01-01T09:31:05.351Z</updated>
+    <updated>2021-01-27T10:35:32.212Z</updated>
+    <entry>
+        <id>http://example.com/2021/01/27/%E9%9A%8F%E6%9C%BA%E5%9B%BE%E5%BA%93/</id>
+        <title>随机图片API接口，和自己的博客更配哦</title>
+        <link rel="alternate" href="http://example.com/2021/01/27/%E9%9A%8F%E6%9C%BA%E5%9B%BE%E5%BA%93/"/>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;\assets\js\Meting.min.js&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;随机图片api接口和自己的博客更配哦&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#随机图片api接口和自己的博客更配哦&#34;&gt;#&lt;/a&gt; 随机图片 API 接口，和自己的博客更配哦&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnNwbGFzaC5pdC8xNjAwLzkwMD9yYW5kb20lRUYlQkMlODglRTYlOEQlQUUlRTglQUYlQjQlRTUlOUIlQkQlRTUlODYlODUlRTUlOEElQTAlRTglQkQlQkQlRTclOTUlQTUlRTYlODUlQTIlRUYlQkMlOEMlRTYlODglOTElRTglQUYlOTUlRTQlQkElODYlRTQlQjglODAlRTQlQjglOEIlRTglQkYlOTglRTUlQTUlQkQlRTklODMlQkQlRTUlQjclQUUlRTQlQjglOEQlRTUlQTQlOUElRUYlQkMlODk=&#34;&gt;https://unsplash.it/1600/900?random（据说国内加载略慢，我试了一下还好都差不多）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cGxvYWRiZXRhLmNvbS9hcGkvcGljdHVyZXMvcmFuZG9tLz9rZXk9QmluZ0V2ZXJ5ZGF5V2FsbHBhcGVyUGljdHVyZSVFRiVCQyU4OCVFNSVCRiU4NSVFNSVCQSU5NCVFNiVBRiU4RiVFNiU5NyVBNSVFNSU5QiVCRSVFNyU4OSU4NyVFRiVCQyU4OQ==&#34;&gt;https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture（必应每日图片）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91cGxvYWRiZXRhLmNvbS9hcGkvcGljdHVyZXMvcmFuZG9tJUVGJUJDJTg4JUU1JUJGJTg1JUU1JUJBJTk0JUU1JTlCJUJFJUU1JUJBJTkzJUVGJUJDJThDJUU0JUI4JTgwJUU0JUJBJTlCJUU5JUEzJThFJUU2JTk5JUFGJUU1JTlCJUJFJUU0JUJBJUJBJUU3JTg5JUE5JUU1JTlCJUJFJUU0JUJCJTgwJUU0JUI5JTg4JUU3JTlBJTg0JUVGJUJDJThDJUU5JTgzJUJEJUU2JTk4JUFGJUU3JThFJUIwJUU0JUJCJUEzJUU5JUEzJThFJUU2JUEwJUJDJUVGJUJDJTg5&#34;&gt;https://uploadbeta.com/api/pictures/random（必应图库，一些风景图人物图什么的，都是现代风格）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zb3VyY2UudW5zcGxhc2guY29tL3JhbmRvbSVFRiVCQyU4OCVFOSVBMyU4RSVFNiVBMCVCQyVFNSU5MCU4QyVFNCVCOCU4QSVFRiVCQyU4QyVFNCVCRCU4NiVFOCVCRiU5OSVFNCVCOCVBQSVFNyU5QSU4NCVFNSU5QiVCRSVFNSVCMCVCQSVFNSVBRiVCOCVFNCVCOCU4RCVFNiU5OCVBRiVFNSVBNCVBNyVFNSU5QiVCRSVFRiVCQyU4OQ==&#34;&gt;https://source.unsplash.com/random（风格同上，但这个的图尺寸不是大图）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;下面是几个二次元的，都差不多ヽ (´o｀（大部分都在本地测试过，可以放心食用），但是以下这些唯一的问题就是。。有些图片质量参差不齐。。所以要想完全和自己口味的话还是自己做一个吧，有开源代码&lt;/p&gt;
+&lt;p&gt;首先最牛逼的大概就是「漫月 API」了，一直被模仿从未被超越那种╮(￣▽￣””)╭，但是现在关了，大概过几个月会开&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pbWcueGpoLm1lL3JhbmRvbV9pbWcucGhw&#34;&gt;https://img.xjh.me/random_img.php&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5kbW9lLmNjL3JhbmRvbS5waHA=&#34;&gt;http://www.dmoe.cc/random.php&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hY2cueWFud3ouY24vYXBpLnBocA==&#34;&gt;https://acg.yanwz.cn/api.php&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pbWcucGF1bHp6aC50ZWNoL3RvdWhvdS9yYW5kb20=&#34;&gt;https://img.paulzzh.tech/touhou/random&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hY2cudG91YmllYy5jbi9yYW5kb20ucGhw&#34;&gt;https://acg.toubiec.cn/random.php&lt;/span&gt;&lt;/p&gt;
+</content>
+        <updated>2021-01-27T10:35:32.212Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2021/01/01/Spring%20Cloud%E7%AC%94%E8%AE%B0/</id>
         <title>Spring Cloud</title>
