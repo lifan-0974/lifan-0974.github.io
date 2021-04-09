@@ -21,14 +21,6 @@
             "tags": []
         },
         {
-            "id": "http://example.com/2021/04/09/1/",
-            "url": "http://example.com/2021/04/09/1/",
-            "title": "",
-            "date_published": "2021-04-09T09:07:31.231Z",
-            "content_html": "<link rel=\"stylesheet\" class=\"aplayer-secondary-style-marker\" href=\"\\assets\\css\\APlayer.min.css\"><script src=\"\\assets\\js\\APlayer.min.js\" class=\"aplayer-secondary-script-marker\"></script><script class=\"meting-secondary-script-marker\" src=\"\\assets\\js\\Meting.min.js\"></script><h1 id=\"根据本地url生成multipartfile文件\"><a class=\"markdownIt-Anchor\" href=\"#根据本地url生成multipartfile文件\">#</a> 根据本地 url 生成 MultipartFile 文件</h1>\n<p>根据本地 url 生成 MultipartFile 文件</p>\n<p>#工具类</p>\n<pre><code>public class ceshi &#123;\npublic static void main(String[] args) &#123;\n    MultipartFile mulFileByPath = getMulFileByPath(&quot;D:\\\\testimg\\\\text01.png&quot;);\n\n&#125;\nprivate static MultipartFile getMulFileByPath(String picPath) &#123;\n    FileItem fileItem = createFileItem(picPath);\n    MultipartFile mfile = new CommonsMultipartFile(fileItem);\n    return mfile;\n&#125;\n\n\nprivate static FileItem createFileItem(String filePath)\n&#123;\n    FileItemFactory factory = new DiskFileItemFactory(16, null);\n    String textFieldName = &quot;textField&quot;;\n    int num = filePath.lastIndexOf(&quot;.&quot;);\n    String extFile = filePath.substring(num);\n    FileItem item = factory.createItem(textFieldName, &quot;text/plain&quot;, true,\n            &quot;MyFileName&quot; + extFile);\n    File newfile = new File(filePath);\n    int bytesRead = 0;\n    byte[] buffer = new byte[8192];\n    try\n    &#123;\n        FileInputStream fis = new FileInputStream(newfile);\n        OutputStream os = item.getOutputStream();\n        while ((bytesRead = fis.read(buffer, 0, 8192))\n                != -1)\n        &#123;\n            os.write(buffer, 0, bytesRead);\n        &#125;\n        os.close();\n        fis.close();\n    &#125;\n    catch (IOException e)\n    &#123;\n        e.printStackTrace();\n    &#125;\n    return item;&#125;&#125;\n</code></pre>\n",
-            "tags": []
-        },
-        {
             "id": "http://example.com/2021/04/09/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0url%E7%94%9F%E6%88%90MultipartFile%E6%96%87%E4%BB%B6/",
             "url": "http://example.com/2021/04/09/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0url%E7%94%9F%E6%88%90MultipartFile%E6%96%87%E4%BB%B6/",
             "title": "根据本地url生成MultipartFile文件",

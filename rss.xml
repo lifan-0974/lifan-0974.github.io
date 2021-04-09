@@ -171,57 +171,6 @@ public static void addWatermark(String sourceImg, String targetImg, String water
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2021/04/09/1/</guid>
-            <title></title>
-            <link>http://example.com/2021/04/09/1/</link>
-            <pubDate>Fri, 09 Apr 2021 17:07:31 +0800</pubDate>
-            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;script class=&#34;meting-secondary-script-marker&#34; src=&#34;\assets\js\Meting.min.js&#34;&gt;&lt;/script&gt;&lt;h1 id=&#34;根据本地url生成multipartfile文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#根据本地url生成multipartfile文件&#34;&gt;#&lt;/a&gt; 根据本地 url 生成 MultipartFile 文件&lt;/h1&gt;
-&lt;p&gt;根据本地 url 生成 MultipartFile 文件&lt;/p&gt;
-&lt;p&gt;#工具类&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class ceshi &amp;#123;
-public static void main(String[] args) &amp;#123;
-    MultipartFile mulFileByPath = getMulFileByPath(&amp;quot;D:\\testimg\\text01.png&amp;quot;);
-
-&amp;#125;
-private static MultipartFile getMulFileByPath(String picPath) &amp;#123;
-    FileItem fileItem = createFileItem(picPath);
-    MultipartFile mfile = new CommonsMultipartFile(fileItem);
-    return mfile;
-&amp;#125;
-
-
-private static FileItem createFileItem(String filePath)
-&amp;#123;
-    FileItemFactory factory = new DiskFileItemFactory(16, null);
-    String textFieldName = &amp;quot;textField&amp;quot;;
-    int num = filePath.lastIndexOf(&amp;quot;.&amp;quot;);
-    String extFile = filePath.substring(num);
-    FileItem item = factory.createItem(textFieldName, &amp;quot;text/plain&amp;quot;, true,
-            &amp;quot;MyFileName&amp;quot; + extFile);
-    File newfile = new File(filePath);
-    int bytesRead = 0;
-    byte[] buffer = new byte[8192];
-    try
-    &amp;#123;
-        FileInputStream fis = new FileInputStream(newfile);
-        OutputStream os = item.getOutputStream();
-        while ((bytesRead = fis.read(buffer, 0, 8192))
-                != -1)
-        &amp;#123;
-            os.write(buffer, 0, bytesRead);
-        &amp;#125;
-        os.close();
-        fis.close();
-    &amp;#125;
-    catch (IOException e)
-    &amp;#123;
-        e.printStackTrace();
-    &amp;#125;
-    return item;&amp;#125;&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">http://example.com/2021/04/09/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0url%E7%94%9F%E6%88%90MultipartFile%E6%96%87%E4%BB%B6/</guid>
             <title>根据本地url生成MultipartFile文件</title>
             <link>http://example.com/2021/04/09/%E6%A0%B9%E6%8D%AE%E6%9C%AC%E5%9C%B0url%E7%94%9F%E6%88%90MultipartFile%E6%96%87%E4%BB%B6/</link>
